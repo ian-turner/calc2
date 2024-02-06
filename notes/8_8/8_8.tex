@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{
+Improper Integrals
+\\
+\large
+Calculus II \S 8.8
+} 
+\author{
+Ian Turner
+\\
+\small
+(\href{mailto:irturner@mailbox.sc.edu}{irturner@mailbox.sc.edu})
+}
+\maketitle
+
+\section*{Main Ideas}
+
+\begin{itemize}
+
+\item
+Improper integrals are definite integrals with infinities or asymptotes within their bounds.
+
+\item
+This can be dealt with by replacing the infinity or asymptote with a limit.
+
+\item
+If the limit does not converge, the integral does not exist.
+
+\end{itemize}
+
+\section*{Examples}
+
+\begin{itemize}
+
+\item
+This integral has a infinite bounds
+
+\begin{gather*}
+\int_1^{\infty} \frac{1}{x^2} dx
+\\
+\\
+\text{we can fix this by adding a limit}
+\\
+=\lim_{b \to \infty} \int_1^b \frac{1}{x^2} dx
+\\
+\\
+\text{and the integral will exist if the limit exists}
+\\
+=\lim_{b \to \infty} \left[ \frac{-1}{x} \right]_1^b
+=\lim_{b \to \infty} \left[ \frac{-1}{b} - (-1) \right]
+\\
+\\
+=\frac{-1}{\infty}+1
+=0+1
+=1
+\end{gather*}
+\\
+
+\item
+This function goes to infinity within the integral's bounds
+
+\begin{gather*}
+\int_0^1 \frac{dx}{\sqrt{x}}
+\\
+\\
+\text{we can also add a limit here}
+\\
+=\lim_{a \to 0} \int_a^1 \frac{dx}{\sqrt{x}}
+=\lim_{a \to 0} \left[ ~ 2\sqrt{x} ~ \right]_a^1
+\\
+=\lim_{a \to 0} \left[ ~ 2\sqrt{1} - 2\sqrt{a} ~ \right]
+=2
+\end{gather*}
+
+\end{itemize}
+
+\newpage
+
+\end{document}
