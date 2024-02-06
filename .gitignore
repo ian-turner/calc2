@@ -3,6 +3,6 @@
 session_plans
 thomas-calculus.pdf
 /**/*.log
-/**/*.pdf
 /**/*.gz
 /**/*.aux
+/**/*.out
