@@ -20,9 +20,7 @@
 \bigskip
 
 \begin{multicols}{2}
-\section*{\S 8.1 - Integration formulas}
-
-Use the big list of formulas for U-sub.
+\section*{8.1 - U-substitution}
 
 {
 \large
@@ -59,32 +57,295 @@ $\int \csc^2 x~dx=-\cot x+c$
 \item
 $\int \sec x \tan x~dx=\sec x+c$
 
+\item
+$\int \csc x \cot x ~dx=-\csc x + c$
+
+\item
+$ \int \tan x ~dx = \ln |\sec x| +c$
+
+\item
+$\int \cot x ~dx = \ln| \sin x| + c$
+
+\item
+$\int \sec x ~dx = \ln|\sec x + \tan x| +c$
+
+\item
+$\int \csc x ~dx = -\ln|\csc x + \cot x| + c$
+
+\item
+$\int \frac{dx}{\sqrt{a^2-x^2}}=\arcsin \left( \frac{x}{a} \right) + c$
+
+\item
+$\int \frac{dx}{a^2+x^2}=\frac{1}{a} \arctan \left| \frac{x}{a} \right| + c$
+
+\item
+$\int \frac{dx}{x\sqrt{x^2-a^2}}=\frac{1}{a} \text{arcsec} \left| \frac{x}{a} \right| + c$
+
 \end{enumerate}
 }
 
-\section*{\S 8.2 - Integration by parts}
-
-Use the following formula.
-In this case, $u$ is a function that is easy to take the derivative of,
-and $dv$ is a function that is easy to integrate.
-Remember to always include $dx$ in your $dv$.
+\section*{8.2 - Integration by parts}
 
 \begin{center}
 \huge
 $\int u~dv=uv-\int v~du$
 \end{center}
 
-\section*{\S 8.3 - Trigonometric integrals}
+\section*{8.3 - Trigonometric integrals}
 
 Use the following process for evaluating products of powers of $\sin$ and $\cos$.
 The process is similar for powers of $\tan$ and $\sec$, except that you will always choose
 $\tan$ to be your substitution.
 
-\section*{\S 8.4 - Trigonometric substitutions}
+{\large
+\begin{center}
+$\int \sin^m x \cos^n x ~dx$
+\end{center}
+}
 
-\section*{\S 8.5 - Partial fractions}
+\textbf{Case 1} If $m$ is odd, write $m$ as $2k+1$ and use identity $\sin^2x=1-\cos^2x$.
+Then sub $u=\cos x$.
 
-\section*{\S 8.8 - Improper integrals}
+\textbf{Case 2} If $n$ is odd, write $n$ as $2k+1$ and use the identity $\cos^2 x = 1-\sin^2 x$.
+Then sub $u=\sin x$.
+
+\textbf{Case 3} If both $m$ and $n$ are even sub using half angle formula.
+
+\section*{8.4 - Trigonometric substitutions}
+
+\begin{center}
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,506); %set diagram left start at 0, and has height of 506
+
+%Shape: Right Triangle [id:dp8253324439760634] 
+\draw   (180,45.25) -- (50,140) -- (180,140) -- cycle ;
+%Shape: Right Triangle [id:dp3759848084047377] 
+\draw   (180,175.25) -- (50,270) -- (180,270) -- cycle ;
+%Shape: Right Triangle [id:dp8101024609558598] 
+\draw   (180,305.25) -- (50,400) -- (180,400) -- cycle ;
+
+% Text Node
+\draw (61,62) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \sqrt{a^{2} +x^{2}}$};
+% Text Node
+\draw (191,81) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x$};
+% Text Node
+\draw (111,142) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle a$};
+% Text Node
+\draw (82,273) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \sqrt{a^{2} -x^{2}}$};
+% Text Node
+\draw (189,221) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x$};
+% Text Node
+\draw (101,202) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle a$};
+% Text Node
+\draw (101,332) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x$};
+% Text Node
+\draw (111,402) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle a$};
+% Text Node
+\draw (181,343) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \sqrt{x^{2} -a^{2}}$};
+% Text Node
+\draw (291,82) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x=a\tan \theta $};
+% Text Node
+\draw (291,222) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x=a\sin \theta $};
+% Text Node
+\draw (291,351) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x=a\sec \theta $};
+
+
+\end{tikzpicture}
+
+\end{center}
+
+
+\section*{8.5 - Partial fractions}
+
+For when you have a rational function of two polynomials
+
+{
+\huge
+\begin{center}
+$\frac{f(x)}{g(x)}$
+\end{center}
+}
+
+\begin{enumerate}
+
+\item
+Make sure $g(x)$ has the same or higher order than $f(x)$.
+The order is the number of its highest exponent term, ex: $x^2$ has order 2, $x^3+2x$ has order 3.
+
+\item
+If $f(x)$ has the higher order, do polynomial long division first.
+
+\item
+Factor $g(x)$.
+
+\item
+If $g(x)$ has a linear factor $(x-r)^n$, then the fraction decomposition will contain
+
+\begin{equation*}
+\frac{A_1}{(x-r)}+
+\frac{A_2}{(x-r)^2}+
+...+
+\frac{A_n}{(x-r)^n}
+\end{equation*}
+
+\item
+If $g(x)$ has an unfactorable quadratic factor $(ax^2+bx+c)^n$ (it will have complex roots), then
+the decomposition will contain
+
+\begin{equation*}
+\frac{A_1 x+B_1}{(ax^2+bx+c)}+
+\frac{A_2 x+B_2}{(ax^2+bx+c)^2}+
+...+
+\frac{A_n x+B_n}{(ax^2+bx+c)^n}
+\end{equation*}
+
+\end{enumerate}
+
+\section*{8.8 - Improper integrals}
+
+For when you have:
+
+\begin{enumerate}
+
+\item
+an infinity in the limit, like
+$\int_1^{\infty} \frac{dx}{\sqrt{x}}$.
+
+\item
+an invalid input in your bounds, like
+$\int_0^1 \frac{dx}{x}$.
+
+\item
+a discontinuity or asymptote within the integration region, like
+$\int_{-1}^1 \frac{dx}{x^{2/3}}$.
+
+\end{enumerate}
+
+\noindent
+Situation 1 and 2 can be dealt with by adding a parameter and a limit:
+
+\begin{equation*}
+\int_1^{\infty} \frac{dx}{x}
+=\lim_{t \to \infty} \int_1^t \frac{dx}{x}
+\end{equation*}
+\\
+
+\noindent
+And situation 3 is the same, except you will end up with two limits from either side:
+
+\begin{equation*}
+\int_{-1}^1 \frac{dx}{x^{2/3}}
+=\lim_{t \to 0^-} \int_{-1}^t \frac{dx}{x^{2/3}}
++\lim_{t \to 0^+} \int_{t}^1 \frac{dx}{x^{2/3}}
+\end{equation*}
+
+\section*{Trigonometric identities}
+
+{\large
+\begin{itemize}
+
+\item
+$\sin^2 x + \cos^2 x = 1$
+
+\item
+$\tan^2 x + 1 = \sec^2 x$
+
+\item
+$\sin \theta = \pm \sqrt{\frac{1-\cos 2\theta}{2}}$
+
+\item
+$\cos \theta = \pm \sqrt{\frac{1+\cos 2\theta}{2}}$
+
+\item
+$\sin 2\theta = \sin \theta \cos \theta$
+
+\item
+$\sin \theta \sin \phi = \frac{ \cos(\theta-\phi)-\cos(\theta+\phi) }{2}$
+
+\item
+$\cos \theta \cos \phi = \frac{ \cos(\theta+\phi)+\cos(\theta-\phi) }{2}$
+
+\item
+$\sin \theta \cos \phi = \frac{ \sin(\theta+\phi)+\sin(\theta-\phi) }{2}$
+
+\item
+$\cos \theta \sin \phi = \frac{ \sin(\theta+\phi)-\sin(\theta-\phi) }{2}$
+
+\end{itemize}
+}
+
+\section*{Polynomial long division}
+
+To divide $f(x)$ by $g(x)$:
+
+\begin{enumerate}
+
+\item
+Place $f(x)$ inside the division symbol
+
+\item
+Find what you need to multiply $f(x)$ by to cancel out the
+highest order term in $g(x)$.
+
+\item
+Multiply $f(x)$ by this and subtract from $g(x)$
+
+\item
+Write the new function bellow
+
+\item
+Repeat until the order of the resulting
+function is less than the order of $f(x)$
+
+\end{enumerate}
+
+\noindent
+\textbf{
+Example:
+}
+
+$x^2+2x+3$ divided by $x-2$:
+
+\begin{equation*}
+\begin{array}{r}
+x+4~~~~~~~~\phantom{)}   \\
+x-2{\overline{\smash{\big)}\,x^2+2x+3\phantom{)}}}\\
+\underline{-~\phantom{(}(x^2-2x)\phantom{-b)}}\\
+0+4x+3\phantom{)}\\ 
+\underline{-~\phantom{()}(4x-8)}\\ 
+0+11\phantom{)}
+\end{array}
+\\
+=(x+4)+\frac{11}{x^2+2x+3}
+\end{equation*}
+
+\section*{L'Hopital's rule}
+
+For when you are evaluating a limit in the form:
+
+\begin{equation*}
+\lim_{t \to a} \frac{f(x)}{g(x)}
+=\frac{0}{0}
+~~\text{OR}~~
+\frac{\infty}{\infty}
+\end{equation*}
+
+\noindent
+You can take the derivative of both parts:
+
+\begin{equation*}
+\lim_{t \to a} \frac{f(x)}{g(x)}
+=\lim_{t \to a} \frac{f'(x)}{g'(x)}
+\end{equation*}
+
+\noindent
+And keep taking derivatives until you reach something easy
+to take the limit of.
+
 \end{multicols}
 
 \end{document}
