@@ -1,4 +1,4 @@
-% Fourier series
+% -- Fourier series example --
 clear
 clc
 
@@ -6,7 +6,7 @@ clc
 T=8;
 dt=0.002;
 t=dt:dt:T;
-ft=mod(t,2)-1;
+ft=mod(t,2)-1+0.3*sin(t)-0.8;
 
 % plotting signal
 figure(1);
@@ -18,7 +18,8 @@ title('Original signal');
 % converting to Fourier series representation
 w0=2*pi./T;
 a0=(1/T)*dt*sum(ft);
-N=1000;
+K=4;
+N=10^(K-1);
 A=zeros(1,N);
 B=zeros(1,N);
 
@@ -31,13 +32,9 @@ for n=1:N
 end
 
 % constructing output for increasing amt of terms
-for k=1:4
-    % output for N=10^k
+for k=1:K
+    % output for N=10^(k-1)
     Ft=a0;
-    Ft=Ft+A(1)*cos(w0*t);
-    Ft=Ft+B(1)*sin(w0*t);
-    
-    % constructing output for N=1->10^k
     for n=1:10^(k-1)
         Ft=Ft+A(n)*cos(n*w0*t);
         Ft=Ft+B(n)*sin(n*w0*t);
