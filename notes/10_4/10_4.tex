@@ -1,0 +1,233 @@
+\documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\def\chapt{10.4}
+
+\begin{document}
+
+\noindent
+{\scshape Math 142} \hfill {\scshape \S\chapt~ notes} \hfill {\scshape Spring 2024}
+
+\smallskip
+
+\hrule
+
+\bigskip
+
+\section*{Main Ideas}
+
+\begin{itemize}
+
+% 
+%
+% Direct comparison test
+%
+%
+\item
+\textbf{Direct Comparison Test} (page 568)
+
+\begin{gather*}
+\sum a_n
+\text{ and }
+\sum b_n
+\text{ are two series where }
+0 \leq a_n \leq b_n
+\text{ for all }
+n
+\end{gather*}
+
+\begin{enumerate}
+\item
+If $\sum b_n$ converges, then $\sum a_n$ also converges.
+\item
+If $\sum a_n$ diverges, then $\sum b_n$ also diverges.
+\end{enumerate}
+\hfill
+%
+%
+% Limit comparison test
+%
+%
+\item
+\textbf{Limit Comparison Test} (page 569)
+
+\begin{gather*}
+\text{If }
+a_n > 0
+\text{ and }
+b_n > 0
+\text{ for all }
+n \geq N
+\text{ where $N$ is some integer }
+\end{gather*}
+
+\begin{enumerate}
+\item
+If
+\begin{gather*}
+\lim_{n\to\infty} \frac{a_n}{b_n}=c \text{ and } c>0
+\text{ then }
+\sum a_n
+\text{ and }
+\sum b_n
+\text{ both converge or both diverge.}
+\end{gather*}
+\item
+
+If
+\begin{gather*}
+\lim_{n\to\infty} \frac{a_n}{b_n}=0
+\text{ and }
+\sum b_n
+\text{ converges, then }
+\sum a_n
+\text{ converges.}
+\end{gather*}
+\item
+
+If
+\begin{gather*}
+\lim_{n\to\infty} \frac{a_n}{b_n}=\infty
+\text{ and }
+\sum b_n
+\text{ diverges, then }
+\sum a_n
+\text{ diverges.}
+\end{gather*}
+\end{enumerate}
+
+\end{itemize}
+
+\newpage
+
+%
+%
+% Homework examples
+%
+%
+
+\section*{Homework Problems}
+
+
+\noindent
+\textbf{
+1.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{1}{n^2+30}
+\\
+\\
+\text { is similar to the $p$-series }
+\sum_{n=1}^{\infty} \frac{1}{n^2}
+\\
+\\
+\implies \frac{1}{n^2+30}<\frac{1}{n^2}
+\text{ for all } n \geq 1
+\\
+\\
+\text{ since the $p$-series with $p=2$ converges, so does our series by direct comparison}
+\end{gather*}
+
+
+\noindent
+\textbf{
+3.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{1}{\sqrt{n}-1}
+\\
+\\
+\text { is similar to the $p$-series }
+\sum_{n=1}^{\infty} \frac{1}{\sqrt{n}}=\sum_{n=1}^{\infty} \frac{1}{n^{1/2}}
+\\
+\\
+\implies  \frac{1}{\sqrt{n}-1}>\frac{1}{\sqrt{n}}
+\text{ for all n }
+\\
+\\
+\text{ since the $p$-series with $p=1/2$ diverges, so does our series by direct comparison}
+\end{gather*}
+
+
+\noindent
+\textbf{
+5.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{\cos^2 n}{n^{3/2}}
+\\
+\\
+\text{ since $\cos^2$ is always between 0 and 1, }
+\\
+0 \leq \frac{\cos^2 n}{n^{3/2}} \leq \frac{1}{n^{3/2}}
+\\
+\\
+\text{ since $\frac{1}{n^{3/2}}$ is a $p$-series with $p=3/2>1$, meaning it converges,}
+\\
+\text{
+then by the direct comparison test our series also converges}
+\end{gather*}
+
+
+\noindent
+\textbf{
+13.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{5^n}{\sqrt{n}~4^n}
+\\
+\\
+\text{ compare with series }
+\sum_{n=1}^{\infty} \frac{1}{\sqrt{n}}
+\\
+\\
+\implies
+\lim_{n \to \infty} \frac{\frac{5^n}{\sqrt{n}~4^n}}{\frac{1}{\sqrt{n}}}
+= \lim_{n \to \infty} \frac{5^n}{4^n}= \lim_{n \to \infty}(5/4)^n=\infty
+\\
+\\
+\text{since the series on the bottom diverges ($p$-series where $p=1/2\leq1$)}
+\\
+\text{the series on top diverges also by limit comparison}
+\end{gather*}
+
+
+\noindent
+\textbf{
+33.
+}
+\\
+\begin{gather*}
+\sum_{n=2}^{\infty} \frac{1}{n\sqrt{n^2-1}}
+\\
+\\
+=\sum_{n=1}^{\infty} \frac{1}{(n+1)\sqrt{(n+1)^2-1}}
+=\sum_{n=1}^{\infty} \frac{1}{(n+1)\sqrt{n^2+2n}}
+\\
+\\
+\text{ after change of bounds (start with $n=1$) is similar to the $p$-series }
+\sum_{n=1}^{\infty} \frac{1}{n^2}
+\\
+\\
+\implies
+\frac{1}{(n+1)\sqrt{n^2+2n}}<\frac{1}{n^2}
+\text{ for all } n \geq 1
+\\
+\\
+\text{ and since $p=2>1$ means the $p$-series converges, our series also converges
+by direct comparison}
+\end{gather*}
+
+
+\end{document}

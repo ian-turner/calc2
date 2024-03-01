@@ -6,7 +6,7 @@ clc
 T=8;
 dt=0.002;
 t=dt:dt:T;
-ft=mod(t,2)-1+0.3*sin(t)-0.8;
+ft=mod(t,2)-1;
 
 % plotting signal
 figure(1);

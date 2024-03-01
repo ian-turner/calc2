@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\def\chapt{10.5}
+
+\begin{document}
+
+\noindent
+{\scshape Math 142} \hfill {\scshape \S\chapt~ notes} \hfill {\scshape Spring 2024}
+
+\smallskip
+
+\hrule
+
+\bigskip
+
+\section*{Main Ideas}
+
+\begin{itemize}
+\item
+\textbf{Absolute Convergence}
+\begin{gather*}
+\text{If }
+~~~~\sum_{n=1}^{\infty~} |a_n|
+~~~~\text{ converges, then }~~~~
+\sum_{n=1}^{\infty} a_n
+~~~~\text{ converges}
+\end{gather*}
+\\
+
+\item
+\textbf{Ratio Test}
+\begin{gather*}
+\text{If}~~~~
+\lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = \rho
+~~~~\text{then the series }~~~~
+\sum_{n=1}^{\infty} a_n
+\end{gather*}
+\begin{enumerate}
+\item[1.]
+\textbf{Converges} if $\rho<1$
+\item[2.]
+\textbf{Diverges} if $\rho>1$
+\item[3.]
+\textbf{Inconclusive} if $\rho=1$
+\end{enumerate}
+\hfill
+\\
+
+\item
+\textbf{Root Test}
+\begin{gather*}
+\text{If}~~~~
+\lim_{n\to \infty} \sqrt[n]{|a_n|} = \rho
+~~~~\text{then the series}~~~~
+\sum_{n=1}^{\infty} a_n
+\end{gather*}
+\begin{enumerate}
+\item[1.]
+\textbf{Converges} if $\rho<1$
+\item[2.]
+\textbf{Diverges} if $\rho>1$
+\item[3.]
+\textbf{Inconclusive} if $\rho=1$
+\end{enumerate}
+\hfill
+\\
+
+\end{itemize}
+
+\end{document}
