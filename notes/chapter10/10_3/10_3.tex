@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{{./}}
+
+\def\chapt{10.3}
+
+\begin{document}
+
+\noindent
+{\scshape Math 142} \hfill {\scshape \S\chapt~ notes} \hfill {\scshape Spring 2024}
+
+\smallskip
+
+\hrule
+
+\bigskip
+
+\hfill
+\\
+
+{
+\huge
+\noindent
+\textbf{10.3 Integral Test}
+}
+
+\section*{Main Ideas}
+
+\begin{itemize}
+\item
+\textbf{Integral Test}
+If $a_n$ is a sequence of \underline{positive} terms,
+and $a_n=f(n)$ for all $n\geq N$, where $f$ is a
+\begin{enumerate}
+\item
+\underline{Continuous}
+\item
+\underline{Positive}
+\item
+\underline{Decreasing}
+\end{enumerate}
+function of $x$, then the series
+\begin{gather*}
+\sum_{n=N}^{\infty} a_n
+~~~~~~~~\text{and the integral}~~~~~~~~
+\int_N^{\infty}f(x)~dx
+\end{gather*}
+either both converge or both diverge.
+\\
+
+\item
+\textbf{P-Series}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{1}{n^{p}}
+~~~~~~~~\text{converges if and only if}~~~~~~~~
+p>1
+\end{gather*}
+
+\end{itemize}
+
+\newpage
+
+%
+%
+% Homework examples
+%
+%
+
+\section*{Homework Problems}
+
+\noindent
+\textbf{
+1.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{1}{n^2}
+~~~~\xrightarrow{\text{convert to integral}}~~~~
+\int_1^{\infty} \frac{dx}{x^2}
+\\
+\\
+\text{1. continuous for } x \geq 1
+\\
+\text{2. positive since } x^2 \geq 0 \text{ for all } x
+\\
+\text{3. decreasing since }
+f'(x)=\frac{-2}{x^3}
+\\
+\text{which is always negative when } x \geq 1
+\\
+\\
+\implies
+\int_1^{\infty} \frac{dx}{x^2}
+~~~~=~~~~
+\lim_{t \to \infty}
+\int_1^t \frac{dx}{x^2}
+~~~~=~~~~
+\lim_{t \to \infty}
+\left. \frac{-1}{x} \right|_1^t
+\\
+\\
+=\lim_{t \to \infty}
+\frac{-1}{t} + 1=0+1=1 \neq \infty
+\implies \text{\underline{converges}}
+\end{gather*}
+
+\noindent
+\textbf{
+3.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{1}{n^2+4}
+~~~~\xrightarrow{\text{convert to integral}}~~~~
+\int_1^{\infty} \frac{dx}{x^2+4}
+\\
+\\
+\text{1. continuous for } x \geq 1
+\\
+\text{2. positive since } x^2 \geq 0 \text{ for all } x
+\\
+\text{3. decreasing since }
+f'(x)=\frac{-1}{(x^2+4)^2} \cdot (2x)
+\\
+\text{which is always negative when } x \geq 1
+\\
+\\
+\implies
+\int_1^{\infty} \frac{dx}{x^2+4}
+~~~~=~~~~
+\lim_{t \to \infty} \int_1^t \frac{dx}{x^2+4}
+~=~
+\lim_{t \to \infty} \int_1^t \frac{dx}{\frac{4x^2}{4}+4}
+~=~
+\lim_{t \to \infty} \int_1^t \frac{1}{4} \cdot \frac{dx}{\frac{x^2}{4}+1}
+\\
+\\
+\text{use } u=x/2,
+~~~
+du=dx/2
+\\
+\\
+\int \frac{1}{2} \cdot \frac{du}{u^2+1}
+=\frac{1}{2} \arctan(u)
+=\frac{1}{2} \arctan(x/2)
+\\
+\\
+\implies
+\frac{1}{2} \lim_{t \to \infty}
+\left. \arctan(x/2) \right|_1^t
+= \frac{1}{2} \left( \frac{\pi}{2} -\frac{\pi}{6} \right) \neq \infty
+\implies \text{\underline{converges}}
+\end{gather*}
+
+\end{document}

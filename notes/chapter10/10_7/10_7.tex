@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\def\chapt{10.7}
+\def\chaptname{Power Series}
+
+\begin{document}
+
+\noindent
+{\scshape Math 142} \hfill {\scshape \S\chapt~ notes} \hfill {\scshape Spring 2024}
+
+\smallskip
+
+\hrule
+
+\bigskip
+
+\hfill
+\\
+
+{
+\huge
+\noindent
+\textbf{\chapt~\chaptname}
+}
+
+\thispagestyle{empty}
+
+\section*{Main Ideas}
+
+\begin{itemize}
+
+\item
+\textbf{Power Series}
+
+are series in the form
+
+\begin{gather*}
+\sum_{n=0}^{\infty} c_n x^n
+~~~~=~~~~
+c_0 + c_1 x + c_2 x^2 + c_3 x^3 + ...
+\end{gather*}
+
+a power series \underline{about} (centered at) $x=a$ is in the form
+\begin{gather*}
+\sum_{n=0}^{\infty} c_n (x-a)^n
+~~~~=~~~~
+c_0 + c_1 (x-a) + c_2 (x-a)^2 + c_3 (x-a)^3 + ...
+\end{gather*}
+\hfill
+\\
+
+\item
+\textbf{Convergence Theorem for Power Series}
+
+\begin{enumerate}
+
+\item
+If the power series
+\begin{gather*}
+\sum_{n=0}^{\infty} c_n x^n
+~~~~=~~~~
+c_0 + c_1 x + c_2 x^2 + c_3 x^3 + ...
+\end{gather*}
+converges at $x=c\neq0$, then it converges for
+all $|x|<c$
+\\
+
+\item
+If it diverges for some $x=d$, then it diverges for all $|x|>|d|$
+
+\end{enumerate}
+\hfill
+\\
+
+\item
+\textbf{Testing for Convergence}
+
+\begin{enumerate}
+
+\item
+Use the \underline{ratio test} or the \underline{root test} to find the interval of convergence
+\begin{gather*}
+|x-a|<R
+\end{gather*}
+
+\item
+If $R$ is finite, test the endpoints for convergence
+
+\item
+If $R$ is finite, the series diverges for all $|x-a|>R$
+
+\end{enumerate}
+
+\end{itemize}
+
+\end{document}

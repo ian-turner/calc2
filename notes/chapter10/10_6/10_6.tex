@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\def\chapt{10.6}
+
+\begin{document}
+
+\noindent
+{\scshape Math 142} \hfill {\scshape \S\chapt~ notes} \hfill {\scshape Spring 2024}
+
+\smallskip
+
+\hrule
+
+\bigskip
+
+\hfill
+\\
+
+{
+\huge
+\noindent
+\textbf{\chapt~Alternating Series, Conditional Convergence}
+}
+
+\section*{Main Ideas}
+
+\begin{itemize}
+
+\item
+\textbf{Alternating Series Test}
+\begin{gather*}
+\text{the series}~~~~~~
+\sum_{n=1}^{\infty} (-1)^{n+1} ~u_n = u_1 - u_2 + u_3 - u_4 + ...
+~~~~~~\text{converges if and only if}
+\\
+\end{gather*}
+
+\begin{enumerate}
+\item
+The $u_n$ terms are all positive
+
+\item
+The $u_n$ terms are eventually non-increasing ($u_{n+1} \leq u_n$ for all $n \geq N$ for some $N$)
+
+\item
+The $u_n$ terms approach 0 ($\lim u_n=0$ as $n\to \infty$)
+\end{enumerate}
+
+\item
+\textbf{Conditional Convergence}
+\\
+
+If a series is \underline{convergent}, but not \underline{absolutely convergent},
+then it is \underline{conditionally convergent}
+
+\begin{gather*}
+\text{if}~~~~
+\sum_{n=1}^{\infty} |a_n|
+~~~~\text{converges, then}~~~~
+\sum_{n=1}^{\infty} a_n
+~~~~\text{is absolutely convergent}
+\end{gather*}
+
+\end{itemize}
+\hfill
+\\
+
+\section*{Summary of Convergence Tests}
+
+\begin{enumerate}
+\item \textbf{$N$-th term test}
+\item \textbf{Geometric series}
+\item \textbf{$P$-series}
+\item \textbf{Integral test}
+\item \textbf{Direct comparison}
+\item \textbf{Limit comparison}
+\item \textbf{Root test}
+\item \textbf{Ratio test}
+\item \textbf{Absolute convergence}
+\item \textbf{Alternating series test}
+\end{enumerate}
+
+\end{document}
