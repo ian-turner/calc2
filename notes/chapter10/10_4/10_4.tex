@@ -148,6 +148,7 @@ If
 \end{gather*}
 
 
+
 \noindent
 \textbf{
 3.
@@ -167,6 +168,7 @@ If
 \\
 \text{ since the $p$-series with $p=1/2$ diverges, so does our series by direct comparison}
 \end{gather*}
+
 
 
 \noindent
@@ -190,7 +192,9 @@ then by the direct comparison test our series also converges}
 \end{gather*}
 
 
+
 \newpage
+
 
 
 \noindent
@@ -218,11 +222,29 @@ then by the direct comparison test our series also converges}
 \end{gather*}
 
 
+
 \noindent
 \textbf{
 11.
 }
 \\
+\begin{gather*}
+\sum_{n=2}^{\infty} \frac{n(n+1)}{(n^2+1)(n-1)}
+~~~\text{compare with}~~~
+\sum_{n=2}^{\infty} \frac{1}{n-1}
+\\
+\\
+\implies
+\lim_{n \to \infty} \left| \frac{\frac{n(n+1)}{(n^2+1)(n-1)}}{\frac{1}{n-1}} \right|
+=\lim_{n \to \infty} \frac{n(n+1)(n-1)}{(n^2+1)(n-1)}
+=\lim_{n \to \infty} \frac{n(n+1)}{(n^2+1)}=1 \implies \text{both converge or diverge}
+\\
+\\
+\sum_{n=2}^{\infty} \frac{1}{n-1}
+=\sum_{n=1}^{\infty} \frac{1}{n}
+~~~\text{($p$-series with $p=1$)} \implies \text{both \underline{diverge} by limit comparison}
+\end{gather*}
+
 
 
 \noindent
@@ -249,11 +271,20 @@ then by the direct comparison test our series also converges}
 \end{gather*}
 
 
+
 \noindent
 \textbf{
 19.
 }
 \\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{\sin^2 n}{2^n}
+~~~\text{is bounded between 0 and } \frac{1}{2^n}
+\\
+\frac{1}{2^n} \text{ is a geometric series with } a=1, r=1/2<1
+\implies \text{\underline{converges}}
+\end{gather*}
+
 
 
 \noindent
@@ -261,6 +292,14 @@ then by the direct comparison test our series also converges}
 21.
 }
 \\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{2n}{3n-1}
+\\
+\\
+\lim_{n \to \infty} \frac{2n}{3n-1}=2/3 \neq 0
+\implies \text{\underline{diverges} by $n$-th term test}
+\end{gather*}
+
 
 
 \noindent

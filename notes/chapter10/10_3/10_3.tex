@@ -112,8 +112,10 @@ f'(x)=\frac{-2}{x^3}
 \\
 =\lim_{t \to \infty}
 \frac{-1}{t} + 1=0+1=1 \neq \infty
-\implies \text{\underline{converges}}
+\implies \text{\underline{converges} by integral test}
 \end{gather*}
+
+
 
 \noindent
 \textbf{
@@ -160,10 +162,14 @@ du=dx/2
 \frac{1}{2} \lim_{t \to \infty}
 \left. \arctan(x/2) \right|_1^t
 = \frac{1}{2} \left( \frac{\pi}{2} -\frac{\pi}{6} \right) \neq \infty
-\implies \text{\underline{converges}}
+\implies \text{\underline{converges} by integral test}
 \end{gather*}
 
+
+
 \newpage
+
+
 
 \noindent
 \textbf{
@@ -192,9 +198,11 @@ f'(x)=-2\cdot e^{-2x} < 0 \text{ for all } x
 ~=~
 \lim_{t \to \infty}
 \left. \frac{-1}{2} e^{-2x} \right|_1^t=\frac{1}{2e^2} \neq \infty
-\implies \text{\underline{converges}}
+\implies \text{\underline{converges} by integral test}
 \\
 \end{gather*}
+
+
 
 \noindent
 \textbf{
@@ -223,9 +231,11 @@ f'(x)=-2\cdot e^{-2x} < 0 \text{ for all } x
 =
 \lim_{t \to \infty}
 \left. \ln|x^2+4| \right|_1^t=\infty
-\implies \text{\underline{diverges}}
+\implies \text{\underline{diverges} by integral test}
 \\
 \end{gather*}
+
+
 
 \noindent
 \textbf{
@@ -238,6 +248,8 @@ f'(x)=-2\cdot e^{-2x} < 0 \text{ for all } x
 ~~\text{geometric series with } a=1, r=1/10 \implies \text{ converges since } |r|<1
 \\
 \end{gather*}
+
+
 
 \noindent
 \textbf{
@@ -252,6 +264,8 @@ f'(x)=-2\cdot e^{-2x} < 0 \text{ for all } x
 \\
 \end{gather*}
 
+
+
 \noindent
 \textbf{
 17.
@@ -260,15 +274,37 @@ f'(x)=-2\cdot e^{-2x} < 0 \text{ for all } x
 \begin{gather*}
 \sum_{n=1}^{\infty} \frac{3}{\sqrt{n}} \text{ greater than $p$-series } \frac{1}{n^{1/2}}
 \text{ with } p=1/2<1
-\implies \text{\underline{diverges}}
+\implies \text{\underline{diverges} by direct comparison}
 \\
 \end{gather*}
+
+
 
 \noindent
 \textbf{
 21.
 }
 \\
+\begin{gather*}
+\sum_{n=2}^{\infty} \frac{\ln n}{n}
+~~\xrightarrow{\text{convert to integral}}~~
+\int_2^{\infty} \frac{\ln x}{x}dx
+\\
+\\
+\text{- continuous and positive since $\ln x$ and $x$ are both $>0$ for $x\geq 2$}
+\\
+\text{- decreasing since $x$ grows faster than $\ln x$}
+\\
+\\
+\int_2^{\infty} \frac{\ln x}{x}dx
+=\lim_{t \to \infty} \int_2^t \frac{\ln x}{x}dx
+=\lim_{t \to \infty} \left. (\ln x)^2 \right|_2^t=\infty
+\implies
+\text{\underline{diverges} by integral test}
+\\
+\end{gather*}
+
+
 
 \noindent
 \textbf{
@@ -281,6 +317,8 @@ a=1, r=2/3
 \implies \text{\underline{converges}}
 \\
 \end{gather*}
+
+
 
 \noindent
 \textbf{
@@ -297,6 +335,8 @@ a=1, r=2/3
 \\
 \end{gather*}
 
+
+
 \noindent
 \textbf{
 27.
@@ -311,6 +351,39 @@ a=1, r=2/3
 ~~\implies
 \text{diverges by $n$-th term test}
 \\
+\end{gather*}
+
+
+
+\noindent
+\textbf{
+37.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{e^n}{1+e^{2n}}
+~~\xrightarrow{\text{convert to integral}}~~
+\int_1^{\infty} \frac{e^x}{1+e^{2x}}dx
+\\
+\\
+\text{- continuous and positive since $e^x>1$ for $x\geq 1$ }
+\\
+\text{- decreasing since $e^{2x}$ grows faster than $e^x$ }
+\\
+\\
+=\lim_{t \to \infty}
+\int_1^t \frac{e^x}{1+e^{2x}}dx
+\\
+\\
+u=e^x ~~~ du=e^x~dx
+\\
+\implies
+\int \frac{e^x}{1+e^{2x}}dx=\int \frac{du}{1+u^2}=\arctan(u)=\arctan(e^x)
+\\
+\implies
+\lim_{t \to \infty}
+\left. \arctan(e^x) \right|_1^t=\frac{\pi}{2}-\frac{\pi}{4}\neq \infty \implies
+\text{\underline{converges} by integral test}
 \end{gather*}
 
 \end{document}
