@@ -26,6 +26,8 @@
 \hfill
 \\
 
+\thispagestyle{empty}
+
 {
 \huge
 \noindent
@@ -159,6 +161,156 @@ du=dx/2
 \left. \arctan(x/2) \right|_1^t
 = \frac{1}{2} \left( \frac{\pi}{2} -\frac{\pi}{6} \right) \neq \infty
 \implies \text{\underline{converges}}
+\end{gather*}
+
+\newpage
+
+\noindent
+\textbf{
+5.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} e^{-2n}
+~~\xrightarrow{\text{convert to integral}}~~
+\int_{1}^{\infty} e^{-2x}
+\\
+\\
+\text{1. continuous for } x \geq 1
+\\
+\text{2. positive since } e^{-2x} > 0 \text{ for all } x
+\\
+\text{3. decreasing since }
+f'(x)=-2\cdot e^{-2x} < 0 \text{ for all } x
+\\
+\\
+\implies
+\int_{1}^{\infty} e^{-2x}
+~=~
+\lim_{t \to \infty}
+\int_{1}^t e^{-2x}
+~=~
+\lim_{t \to \infty}
+\left. \frac{-1}{2} e^{-2x} \right|_1^t=\frac{1}{2e^2} \neq \infty
+\implies \text{\underline{converges}}
+\\
+\end{gather*}
+
+\noindent
+\textbf{
+7.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{n}{n^2+4}
+~\xrightarrow{\text{convert to integral}}~
+\int_1^{\infty} \frac{x~dx}{x^2+4}
+\\
+\\
+\text{1. continuous for } x \geq 1
+\\
+\text{2. positive since } \frac{x}{x^2+4} > 0 \text{ for all } x > 0
+\\
+\text{3. decreasing since} f'(x)<0 \text{ for all } x \geq 1
+\\
+\\
+\implies
+\lim_{t \to \infty} 
+\int_1^t \frac{x~dx}{x^2+4}
+=
+\lim_{t \to \infty} 
+\int_1^t \frac{du}{2u}
+=
+\lim_{t \to \infty}
+\left. \ln|x^2+4| \right|_1^t=\infty
+\implies \text{\underline{diverges}}
+\\
+\end{gather*}
+
+\noindent
+\textbf{
+13.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{1}{10^n}
+=\sum_{n=1}^{\infty} \left(\frac{1}{10}\right)^n
+~~\text{geometric series with } a=1, r=1/10 \implies \text{ converges since } |r|<1
+\\
+\end{gather*}
+
+\noindent
+\textbf{
+15.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{n}{n+1}
+~~
+\lim_{n \to \infty} \frac{n}{n+1}=1 \neq 0
+\implies \text{does not converge by $n$-th term test}
+\\
+\end{gather*}
+
+\noindent
+\textbf{
+17.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{3}{\sqrt{n}} \text{ greater than $p$-series } \frac{1}{n^{1/2}}
+\text{ with } p=1/2<1
+\implies \text{\underline{diverges}}
+\\
+\end{gather*}
+
+\noindent
+\textbf{
+21.
+}
+\\
+
+\noindent
+\textbf{
+23.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{2^n}{3^n} \text{ is geometric series with }
+a=1, r=2/3
+\implies \text{\underline{converges}}
+\\
+\end{gather*}
+
+\noindent
+\textbf{
+25.
+}
+\\
+\begin{gather*}
+\sum_{n=0}^{\infty} \frac{-2}{n+1}
+~=~
+-2 \sum_{n=1}^{\infty} \frac{1}{n}
+~~
+\text{ $p$-series with } p=1\leq 1
+\implies \text{\underline{diverges}}
+\\
+\end{gather*}
+
+\noindent
+\textbf{
+27.
+}
+\\
+\begin{gather*}
+\sum_{n=1}^{\infty} \frac{2^n}{n+1}
+~~~~~~~~
+\lim_{n \to \infty} \frac{2^n}{n+1}
+\xrightarrow{\text{L'Hopital's}}
+\lim_{n \to \infty} \frac{2^n \cdot \ln 2}{1}=\infty \neq 0
+~~\implies
+\text{diverges by $n$-th term test}
+\\
 \end{gather*}
 
 \end{document}
