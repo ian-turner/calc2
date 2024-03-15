@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{{./}}
+
+\def\chapt{10.2}
+\def\chaptname{Infinite Series}
+
+\begin{document}
+
+\noindent
+{\scshape Math 142} \hfill {\scshape \S\chapt~ notes} \hfill {\scshape Spring 2024}
+
+\smallskip
+
+\hrule
+
+\bigskip
+
+\hfill
+\\
+
+\thispagestyle{empty}
+
+{
+\huge
+\noindent
+\textbf{\chapt~\chaptname}
+}
+
+\section*{Main Ideas}
+
+\begin{itemize}
+
+\item
+A \textbf{Infinite Series} is the sum of an infinite \underline{sequence}
+\begin{gather*}
+S_n ~~~=~~~
+\sum_{n=1}^{\infty} a_n
+~~~=~~~
+a_1 + a_2 + a_3 + ...
+\end{gather*}
+
+\item A \textbf{Partial Sum} is the sum of the first $n$ terms of a series
+\begin{gather*}
+s_n ~~~=~~~
+\sum_{k=1}^n a_k
+~~~=~~~
+a_1 + a_2 + a_3 + ... + a_n
+\end{gather*}
+if the sequence of partial sums $\{~s_n~\}$ converges to $L$ as $n \to \infty$,
+then we say the infinite series converges to $L$
+\\
+
+\item
+The \textbf{$N$-th term test}
+\begin{gather*}
+\text{if}~~~
+\lim_{n \to \infty} a_n \neq 0
+~~~\text{then the series}~~~
+\sum_{n=1}^{\infty} a_n
+~~~\text{diverges}
+\\
+\\
+\text{(otherwise the test is \underline{inconclusive})}
+\\
+\end{gather*}
+
+\item
+\textbf{Geometric Series}
+\begin{gather*}
+\text{are series in the form}~~~
+\sum_{n=1}^{\infty} ar^{n-1}=a+ar+ar^2+ar^3+...
+\\
+\\
+\text{the partial sum of the series is}~~~
+s_n ~~~=~~~ a+ar+ar^2+...+ar^{n-1}~~~=~~~\frac{a(1-r^n)}{1-r}
+\\
+\\
+\text{if }~~~ |r|<1 ~~~\text{ then the series \underline{converges} to }~~~
+\frac{a}{1-r}
+~~~\text{otherwise it \underline{diverges}}
+\end{gather*}
+
+\end{itemize}
+
+\end{document}
