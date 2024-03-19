@@ -129,7 +129,7 @@ then it is \underline{conditionally convergent}
 \implies \frac{1}{n3^n}>0 \text{~always}
 \\
 \text{2. terms are decreasing since } d \left[ \frac{1}{x3^x} \right]
-= \frac{-1}{x3^x} \cdot (3^x+x 3^x \ln 3) < 0 \text{~always}
+= \frac{-1}{(x3^x)^2} \cdot (3^x+x 3^x \ln 3) < 0 \text{~always}
 \\
 \text{3. }
 \lim_{n \to \infty} \frac{1}{n3^n} = 0
@@ -155,7 +155,7 @@ then it is \underline{conditionally convergent}
 d \left[ \frac{x}{x^2+1} \right]
 =\frac{(x^2+1)-x \cdot 2x}{(x^2+1)^2}
 =\frac{1-x^2}{(x^2+1)^2}<0
-\text{~when } x \geq 1
+\text{~when } x > 1
 \\
 \text{3. } \lim_{n \to \infty} \frac{n}{n^2+1}=0
 \\
@@ -240,7 +240,7 @@ d \left[ \frac{\ln x}{x^2} \right]
 \begin{gather*}
 \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{\sqrt{n}}
 \\
-\sum_{n=1}^{\infty} \left| (-1)^{n+1} \frac{1}{\sqrt{n}} \right|
+\left| a_n \right|
 =
 \sum_{n=1}^{\infty} \frac{1}{\sqrt{n}}
 \\
@@ -275,9 +275,9 @@ d \left[ \frac{1}{\sqrt{x}} \right] = \frac{-1}{2x^{3/2}} < 0 \text{~always when
 \sum_{n=1}^{\infty} (-1)^{n+1} \frac{n}{n^3+1}
 \\
 \\
-\text{compare with } b_n = \frac{1}{n^2}
+|a_n|= \frac{n}{n^3+1} \text{ ~compare with } b_n = \frac{1}{n^2}
 \\
-\lim_{n \to \infty} \left| \frac{a_n}{b_n} \right|
+\lim_{n \to \infty} \frac{a_n}{b_n}
 =\lim_{n \to \infty} \frac{n}{n^3+1} \div \frac{1}{n^2}
 =\lim_{n \to \infty} \frac{n^3}{n^3+1}=1
 \\
@@ -299,8 +299,19 @@ d \left[ \frac{1}{\sqrt{x}} \right] = \frac{-1}{2x^{3/2}} < 0 \text{~always when
 \sum_{n=1}^{\infty} (-1)^n \frac{1}{n+3}
 \\
 \\
-\text{not abs conv since $p$-series with $p=1$}
+|a_n|=\frac{1}{n+3}
+~~~~\text{compare to}~~~~
+\frac{1}{n}=b_n
 \\
+\lim_{n \to \infty} \frac{a_n}{b_n} = \lim_{n \to \infty} \frac{1}{n+3} \div \frac{1}{n}
+= \lim_{n \to \infty} \frac{n}{n+3}=1
+\\
+\\
+\implies \text{~both do the same thing}
+\implies \text{not abs conv since $p$-series with $p=1$}
+\\
+\\
+\text{try alternating series test:}
 \\
 \text{1. all terms are positive since } n+3 > 0 \text{~always when } n \geq 1
 \\
@@ -317,6 +328,8 @@ d \left[ \frac{1}{x+3} \right]
 \text{conv by alternating series test}
 \implies\text{conditionally convergent}
 \end{gather*}
+\hfill
+\\
 
 
 
