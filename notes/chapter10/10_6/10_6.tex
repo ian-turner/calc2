@@ -9,6 +9,7 @@
 \usepackage{multicol}
 
 \def\chapt{10.6}
+\def\chaptname{Alternating Series, Conditional Convergence}
 
 \begin{document}
 
@@ -29,7 +30,7 @@
 {
 \huge
 \noindent
-\textbf{\chapt~Alternating Series, Conditional Convergence}
+\textbf{\chapt~\chaptname}
 }
 
 \section*{Main Ideas}
@@ -89,5 +90,254 @@ then it is \underline{conditionally convergent}
 \item \textbf{Absolute convergence}
 \item \textbf{Alternating series test}
 \end{enumerate}
+
+\newpage
+
+\section*{Homework Problems}
+
+\noindent
+\textbf{1.}
+\begin{gather*}
+\sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{\sqrt{n}}
+\\
+\\
+\text{1. terms are all positive since } n > 0 \implies \sqrt{n} > 0
+\implies \frac{1}{\sqrt{n}} > 0 \text{~always}
+\\
+\text{2. terms are decreasing since } d \left[ \frac{1}{\sqrt{x}} \right]
+= \frac{-1}{2x^{3/2}} < 0 \text{~always}
+\\
+\text{3.}
+\lim_{n \to \infty} \frac{1}{\sqrt{n}}=0
+\\
+\\
+\implies \text{conv by alternating series test}
+\end{gather*}
+\hfill
+\\
+
+
+
+
+\noindent
+\textbf{3.}
+\begin{gather*}
+\sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n3^n}
+\\
+\\
+\text{1. terms are all positive since } n > 0 \implies n3^n > 0
+\implies \frac{1}{n3^n}>0 \text{~always}
+\\
+\text{2. terms are decreasing since } d \left[ \frac{1}{x3^x} \right]
+= \frac{-1}{x3^x} \cdot (3^x+x 3^x \ln 3) < 0 \text{~always}
+\\
+\text{3. }
+\lim_{n \to \infty} \frac{1}{n3^n} = 0
+\\
+\\
+\implies \text{conv by alternating series test}
+\end{gather*}
+\hfill
+\\
+
+
+
+
+\noindent
+\textbf{5.}
+\begin{gather*}
+\sum_{n=1}^{\infty} (-1)^{n+1} \frac{n}{n^2+1}
+\\
+\\
+\text{1. $u_n$ terms are all positive since top and bottom always positive when } n \geq 1
+\\
+\text{2. terms are decreasing since }
+d \left[ \frac{x}{x^2+1} \right]
+=\frac{(x^2+1)-x \cdot 2x}{(x^2+1)^2}
+=\frac{1-x^2}{(x^2+1)^2}<0
+\text{~when } x \geq 1
+\\
+\text{3. } \lim_{n \to \infty} \frac{n}{n^2+1}=0
+\\
+\\
+\implies \text{conv by alternating series test}
+\end{gather*}
+\hfill
+\\
+
+
+
+
+\noindent
+\textbf{7.}
+\begin{gather*}
+\sum_{n=1}^{\infty} (-1)^{n+1} \frac{2^n}{n^2}
+\\
+\\
+\text{3. does not meet condition because}
+\\
+\lim_{n \to \infty} \frac{2^n}{n^2}
+\xrightarrow{\text{L'Hopital's}}
+\lim_{n \to \infty} \frac{2^n \cdot \ln 2}{2n}
+\xrightarrow{\text{L'Hopital's}}
+\lim_{n \to \infty} \frac{2^n \cdot \ln 2 \cdot \ln 2}{2}=\infty \neq 0
+\\
+\\
+\implies \text{div by $n$-th term test}
+\end{gather*}
+\hfill
+\\
+
+
+
+\noindent
+\textbf{11.}
+\begin{gather*}
+\sum_{n=1}^{\infty} (-1)^{n+1} \frac{\ln n}{n}
+\\
+\\
+\text{1. $u_n$ terms are all positive since top and bottom always positive when } n > 1
+\\
+\text{2. terms are decreasing since }
+d \left[ \frac{\ln x}{x^2} \right]
+= \frac{x^{-1}\cdot x^2 - \ln x \cdot 2x}{(x^2)^2}
+= \frac{x(1 - 2\ln x)}{(x^2)^2}>0
+\text{~when } x \geq 1
+\\
+\text{3. } \lim_{n \to \infty} \frac{\ln n}{n^2}
+\xrightarrow{\text{L'Hopital's}} \frac{1/n}{2n}=\frac{1}{2n^2}=0
+\\
+\\
+\implies \text{conv by alternating series test}
+\end{gather*}
+\hfill
+\\
+
+
+
+\noindent
+\textbf{15.}
+\begin{gather*}
+\sum_{n=1}^{\infty} (-1)^{n+1} (0.1)^n
+\\
+\sum_{n=1}^{\infty} \left| (-1)^{n+1} (0.1)^n \right|
+= \sum_{n=1}^{\infty} (0.1)^n
+\\
+\\
+\text{conv absolutely since geometric series with } r=0.1 \implies |r|<1
+\end{gather*}
+\hfill
+\\
+
+
+
+\newpage
+
+
+
+\noindent
+\textbf{17.}
+\begin{gather*}
+\sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{\sqrt{n}}
+\\
+\sum_{n=1}^{\infty} \left| (-1)^{n+1} \frac{1}{\sqrt{n}} \right|
+=
+\sum_{n=1}^{\infty} \frac{1}{\sqrt{n}}
+\\
+\\
+\text{not abs conv since $p$-series div with } p=1/2<1
+\\
+\\
+\text{alternating series test:}
+\\
+\\
+\text{1. terms are all positive since } \sqrt{n}>0 \text{~always}
+\\
+\text{2. terms are decreasing since }
+d \left[ \frac{1}{\sqrt{x}} \right] = \frac{-1}{2x^{3/2}} < 0 \text{~always when } x \geq 1
+\\
+\text{3. }
+\lim_{n \to \infty} \frac{1}{\sqrt{n}} = 0
+\\
+\\
+\implies \text{converges by alternating series test}
+\implies \text{conditionally conv}
+\end{gather*}
+\hfill
+\\
+
+
+
+
+\noindent
+\textbf{19.}
+\begin{gather*}
+\sum_{n=1}^{\infty} (-1)^{n+1} \frac{n}{n^3+1}
+\\
+\\
+\text{compare with } b_n = \frac{1}{n^2}
+\\
+\lim_{n \to \infty} \left| \frac{a_n}{b_n} \right|
+=\lim_{n \to \infty} \frac{n}{n^3+1} \div \frac{1}{n^2}
+=\lim_{n \to \infty} \frac{n^3}{n^3+1}=1
+\\
+\\
+\implies \text{both converge or both diverge by limit comparison}
+\\
+\implies \text{conv since $1/n^2$ is $p$-series with $p=2>1$}
+\implies \text{abs conv}
+\end{gather*}
+\hfill
+\\
+
+
+
+
+\noindent
+\textbf{21.}
+\begin{gather*}
+\sum_{n=1}^{\infty} (-1)^n \frac{1}{n+3}
+\\
+\\
+\text{not abs conv since $p$-series with $p=1$}
+\\
+\\
+\text{1. all terms are positive since } n+3 > 0 \text{~always when } n \geq 1
+\\
+\text{2. terms are decreasing since }
+d \left[ \frac{1}{x+3} \right]
+=\frac{-1}{(x+3)^2} < 0
+\text{~always since } (x+3)^2>0 \text{~always when } x \geq 1
+\\
+\text{3. }
+\lim_{n \to \infty} \frac{1}{n+3}=0
+\\
+\\
+\implies
+\text{conv by alternating series test}
+\implies\text{conditionally convergent}
+\end{gather*}
+
+
+
+\noindent
+\textbf{23.}
+\begin{gather*}
+\sum_{n=1}^{\infty} (-1)^{n+1} \frac{3+n}{5+n}
+\\
+\\
+\lim_{n \to \infty} \frac{3+n}{5+n}=1 \neq 0 \implies \text{div by $n$-th term test}
+\end{gather*}
+
+
+\noindent
+\textbf{31.}
+\begin{gather*}
+\sum_{n=1}^{\infty} (-1)^n \frac{n}{n+1}
+\\
+\\
+\lim_{n \to \infty} \frac{n}{n+1}=1 \neq 0 \implies \text{div by $n$-th term test}
+\end{gather*}
+
 
 \end{document}
